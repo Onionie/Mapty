@@ -105,6 +105,11 @@ class App {
   _newWorkout(e) {
     e.preventDefault();
 
+    //Get data from form
+    const type = inputType.value;
+    const distance = +inputDistance.value;
+    const duration = +inputDuration.value;
+
     //Clear input field when "submit"
     inputDistance.value =
       inputCadence.value =
