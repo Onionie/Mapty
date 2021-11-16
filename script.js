@@ -1,5 +1,6 @@
 'use strict';
 
+//Elements DOM
 const form = document.querySelector('.form');
 const containerWorkouts = document.querySelector('.workouts');
 const inputType = document.querySelector('.form__input--type');
@@ -12,11 +13,14 @@ class Workout {
   date = new Date();
   id = (new Date() + '').slice[-10];
 
+  //Initiates before other methods
   constructor(coords, distance, duration) {
     this.coords = coords;
     this.distance = distance;
     this.duration = duration;
   }
+
+  //Methods can be called later on
   _setDescription() {
     // prettier-ignore
     const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
